@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'app',
+    podModulePrefix: 'app/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -26,6 +27,15 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' 0.0.0.0:35729",
+      'font-src': "'self' data: http://fonts.gstatic.com",
+      'connect-src': "'self' ws://0.0.0.0:35729",
+      'img-src': "'self'",
+      'style-src': "'self' fonts.googleapis.com",
+      'media-src': "'self'"
+    };
   }
 
   if (environment === 'test') {

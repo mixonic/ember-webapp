@@ -1,3 +1,22 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<header class="app-bar">
+  <button class="menu"><img src="./hamburger.png"></button>
+  <h3 class="logo">Logo</h3>
+  <section class="app-bar-actions">
+    <h3>User</h3>
+    <button><img src="./images/search.png"></button>
+  </section>
+</header>
+<nav class="navdrawer-container">
+  <ul>
+    <li>{{#link-to 'admin'}}Admin{{/link-to}}</li>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Other</a></li>
+  </ul>
+</nav>
+<section class="main-content">
+<main>
 
-{{outlet}}
+App {{outlet}}
+
+</main>
+</section>
