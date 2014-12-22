@@ -1,9 +1,10 @@
+<div id="menuDiv">
 <ul class="nav">
-    <li><a href="#">1. Menu</a>
+    <li><a href="#">Admin</a>
         <ul>
-            <li><a href="#">1.1 Submenu</a></li>
-            <li><a href="#">1.2 Submenu</a></li>
-            <li><a href="#">1.3 Submenu</a></li>
+            <li>{{#link-to 'admin.user'}}User{{/link-to}}</li>
+            <li>{{#link-to 'admin.role'}}Role{{/link-to}}</li>
+            <li>{{#link-to 'admin.group'}}Group{{/link-to}}</li>
         </ul>
     </li>
     <li><a href="#">2. Menu</a>
@@ -23,3 +24,4 @@
     </li>
 
 </ul>
+</div>
