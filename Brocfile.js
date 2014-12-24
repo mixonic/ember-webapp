@@ -5,7 +5,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp();
 
 app.import('vendor/jquery-navgoco/jquery.navgoco.js');
-
+app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
