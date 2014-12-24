@@ -4,8 +4,14 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
-app.import('vendor/jquery-navgoco/jquery.navgoco.js');
 app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
+
+var pickFiles = require('broccoli-static-compiler');
+var fontAwesomeFonts = pickFiles('bower_components/fontawesome/fonts', {
+  srcDir: '/',
+  destDir: '/fonts'
+});
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
@@ -19,4 +25,4 @@ app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstra
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+module.exports = app.toTree(fontAwesomeFonts);
